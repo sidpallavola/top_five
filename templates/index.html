@@ -6,25 +6,98 @@
     <title>Top Five</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 2em;
+            font-family: "Segoe UI", Arial, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background: #f8f9fc;
+            color: #333;
         }
-        form {
-            margin-bottom: 2em;
+
+        h1, h2 {
+            text-align: center;
+            color: #2d3e50;
+            margin-bottom: 1.5rem;
         }
+
+        .card {
+            background: white;
+            max-width: 600px;
+            margin: 0 auto 2rem auto;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
+
+        form label {
+            font-weight: bold;
+            display: block;
+            margin-top: 1rem;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+            transition: 0.2s;
+        }
+
+        input[type="text"]:focus {
+            border-color: #4A90E2;
+            outline: none;
+            box-shadow: 0 0 4px rgba(74, 144, 226, 0.4);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #4A90E2;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            margin-top: 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background: #357ABD;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
         }
-        table, th, td {
-            border: 1px solid black;
-        }
-        th, td {
-            padding: 10px;
+
+        th {
+            background: #4A90E2;
+            color: white;
+            padding: 12px;
             text-align: left;
         }
-        th {
-            background-color: #f4f4f4;
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        tr:hover {
+            background: #f1f7ff;
+        }
+
+        .table-container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        p {
+            text-align: center;
         }
     </style>
 </head>
