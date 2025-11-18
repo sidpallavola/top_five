@@ -125,6 +125,7 @@
                 <tr>
                     <th>Category</th>
                     <th>Items</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -132,6 +133,20 @@
                     <tr>
                         <td>{{ submission.category }}</td>
                         <td>{{ ", ".join(submission.five) }}</td>
+                        <td>
+                            <form action="/delete/{{ loop.index0 }}" method="POST" style="display:inline;">
+                                <button style="
+                                    background:#e63946;
+                                    color:white;
+                                    border:none;
+                                    padding:6px 10px;
+                                    border-radius:6px;
+                                    cursor:pointer;
+                                ">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>

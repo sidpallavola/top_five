@@ -20,5 +20,12 @@ def home():
         return redirect("/")
     return render_template("index.html", submissions=submissions)
 
+@app.route("/delete/<int:index>", methods=["POST"])
+def delete(index):
+    global submissions
+    if 0 <= index < len(submissions):
+        submissions.pop(index)
+    return redirect("/")
+
 if __name__ == "__main__":
     app.run(debug=True)
